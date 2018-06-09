@@ -1,50 +1,61 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import { fadeInUpBig } from 'react-animations'
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import { fadeInUpBig } from 'react-animations';
 
-const fadeInFooter = keyframes`${fadeInUpBig}`
+const fadeInFooter = keyframes`${fadeInUpBig}`;
 
 const StyledFooter = styled.footer`
-  font-size: 1em;
   text-align: center;
   animation: ${fadeInFooter} 1s;
-  a {
-    text-decoration: none;
-    &:hover {
-      font-weight: bold;
-    }
+`;
+
+const A = styled.a`
+  text-decoration: none;
+  color: ${props => props.color};
+  &:hover {
+    border-bottom: 1px solid ${props => props.color};
   }
-`
+`;
 
 const Footer = () => (
   <StyledFooter>
     Powered by{' '}
-    <a
-      style={{ color: 'dodgerblue' }}
+    <A
+      color="deepskyblue"
       href="https://reactjs.org/"
       target="_blank"
       rel="noopener noreferrer"
     >
       React
-    </a>+{' '}
-    <a
-      style={{ color: 'purple' }}
-      href="https://www.gatsbyjs.org"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      GatsbyJS
-    </a>{' '}
-    +{' '}
-    <a
-      style={{ color: 'palevioletred' }}
+    </A>
+    {' + '}
+    <A
+      color="palevioletred"
       href="https://www.styled-components.com"
       target="_blank"
       rel="noopener noreferrer"
     >
       styled-components
-    </a>
+    </A>
+    {' + '}
+    <A
+      color="purple"
+      href="https://www.gatsbyjs.org"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GatsbyJS
+    </A>
+    {' + '}
+    <A
+      color="red"
+      href="https://github.com/jamorin/jeremyamorin.com"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ❤️
+    </A>
   </StyledFooter>
-)
+);
 
-export default Footer
+export default Footer;
