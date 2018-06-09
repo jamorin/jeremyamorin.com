@@ -1,10 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { keyframes } from 'styled-components'
-import { zoomIn } from 'react-animations'
+import React from 'react';
+import styled from 'styled-components';
+import { keyframes } from 'styled-components';
+import { zoomIn } from 'react-animations';
 
-import github from '../github.svg'
-import envelope from '../envelope.svg'
+import github from '../github.svg';
+import envelope from '../envelope.svg';
 
 const Li = styled.li`
   display: inline-block;
@@ -19,7 +19,7 @@ const Li = styled.li`
     height: 46px;
     width: 46px;
   }
-`
+`;
 
 const links = [
   {
@@ -32,12 +32,12 @@ const links = [
     title: 'Email',
     image: envelope,
   },
-]
+];
 
-const zoomInSocalLinks = keyframes`${zoomIn}`
+const zoomInSocalLinks = keyframes`${zoomIn}`;
 const StyledSocialLinks = styled.ul`
   animation: ${zoomInSocalLinks} 2s;
-`
+`;
 
 const SocialLinks = () => (
   <StyledSocialLinks>
@@ -49,6 +49,6 @@ const SocialLinks = () => (
       </Li>
     ))}
   </StyledSocialLinks>
-)
+);
 
-export default SocialLinks
+export default SocialLinks;

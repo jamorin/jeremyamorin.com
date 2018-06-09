@@ -1,8 +1,8 @@
-import React from 'react'
-import styled, { keyframes } from 'styled-components'
-import { fadeInUpBig } from 'react-animations'
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import { fadeInUpBig } from 'react-animations';
 
-const fadeInFooter = keyframes`${fadeInUpBig}`
+const fadeInFooter = keyframes`${fadeInUpBig}`;
 
 const StyledFooter = styled.footer`
   font-size: 1em;
@@ -14,7 +14,7 @@ const StyledFooter = styled.footer`
       font-weight: bold;
     }
   }
-`
+`;
 
 const Footer = () => (
   <StyledFooter>
@@ -45,6 +45,6 @@ const Footer = () => (
       styled-components
     </a>
   </StyledFooter>
-)
+);
 
-export default Footer
+export default Footer;
