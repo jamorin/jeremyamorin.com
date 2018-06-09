@@ -1,26 +1,15 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { fadeIn, fadeInLeft, fadeInRight, flip } from 'react-animations';
+import { fadeIn, fadeInLeft, fadeInRight } from 'react-animations';
 import SocialLinks from './SocialLinks';
+import Footer from '../components/Footer';
 
-const f = keyframes`${flip}`;
-
-const StyledHero = styled.div`
+const StyledHero = styled.section`
   text-align: center;
   hr {
     border: none;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid darkgray;
     margin: 30px 30%;
-  }
-`;
-
-const rotate360 = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
   }
 `;
 
@@ -29,13 +18,6 @@ const Emojis = styled.div`
   font-size: 1.5em;
   animation: 3s ${fadeInEmoji};
   user-select: none;
-`;
-
-const Rotate = styled.div`
-  display: inline-block;
-  animation: ${rotate360} 4s linear infinite;
-  padding: 2rem 1rem;
-  font-size: 3rem;
 `;
 
 const fadeInLeftName = keyframes`${fadeInLeft}`;
@@ -67,5 +49,6 @@ export default () => (
     </Description>
     <hr />
     <SocialLinks />
+    <Footer />
   </StyledHero>
 );

@@ -5,7 +5,6 @@ import styled, { injectGlobal } from 'styled-components';
 import Favicon from 'react-favicon';
 
 import favicon from '../favicon.png';
-import Footer from '../components/Footer';
 
 injectGlobal`
   html {
@@ -30,7 +29,6 @@ const Layout = ({ children }) => (
       ]}
     />
     {children()}
-    <Footer />
   </StyledLayout>
 );
 

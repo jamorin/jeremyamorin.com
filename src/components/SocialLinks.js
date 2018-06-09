@@ -9,10 +9,10 @@ import envelope from '../envelope.svg';
 const Li = styled.li`
   display: inline-block;
   margin-right: 20px;
-  opacity: 0.3;
+  opacity: 0.4;
   transition: opacity 0.5s ease-out;
   &:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   img {
