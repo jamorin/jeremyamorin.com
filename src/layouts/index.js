@@ -24,8 +24,25 @@ const Layout = ({ children }) => (
     <Helmet
       title="Jeremy Amorin | Software Engineer"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'The personal site of Jeremy Amorin' },
+        {
+          name: 'keywords',
+          content:
+            'programming, software, engineer, developer, react, java, javascript',
+        },
+        {
+          name: 'apple-mobile-web-app-capable',
+          content: 'yes',
+        },
+        {
+          name: 'apple-mobile-web-app-status-bar-style',
+          content: 'black-translucent',
+        },
+        {
+          // Android address bar
+          name: 'theme-color',
+          content: '#2b9eeb',
+        },
       ]}
     />
     {children()}
