@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import styled, { injectGlobal } from 'styled-components';
 import Favicon from 'react-favicon';
 
-import favicon from '../favicon.png';
+import favicon from '../assets/favicon.png';
 
 injectGlobal`
   html {
