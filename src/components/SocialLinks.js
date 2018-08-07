@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { keyframes } from 'styled-components';
 import { zoomIn } from 'react-animations';
 
-import github from '../github.svg';
-import envelope from '../envelope.svg';
+import github from '../assets/github.svg';
+import envelope from '../assets/envelope.svg';
 
 const Li = styled.li`
   display: inline-block;

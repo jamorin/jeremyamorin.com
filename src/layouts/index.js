@@ -4,18 +4,21 @@ import Helmet from 'react-helmet';
 import styled, { injectGlobal } from 'styled-components';
 import Favicon from 'react-favicon';
 
-import favicon from '../favicon.png';
+import favicon from '../assets/favicon.png';
 
 injectGlobal`
   html {
     font-family: 'Open Sans', sans-serif;
+  }
+  body {
+    overflow-x: hidden;
   }
 `;
 
 const StyledLayout = styled.div`
   max-width: 960px;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 40px 0;
 `;
 
 const Layout = ({ children }) => (

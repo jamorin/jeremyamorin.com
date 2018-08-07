@@ -3,6 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import { fadeIn, fadeInLeft, fadeInRight } from 'react-animations';
 import SocialLinks from './SocialLinks';
 import Footer from '../components/Footer';
+import Avatar from '../components/Avatar';
 
 const StyledHero = styled.section`
   text-align: center;
@@ -18,19 +19,20 @@ const Emojis = styled.div`
   font-size: 1.5em;
   animation: 3s ${fadeInEmoji};
   user-select: none;
+  /* font-family: 'Segoe UI Emoji'; */
 `;
 
 const fadeInLeftName = keyframes`${fadeInLeft}`;
 const Name = styled.h1`
   font-size: 3rem;
-  animation: ${fadeInLeftName} 1s;
+  animation: ${fadeInLeftName} 2s;
 `;
 
 const fadeInRightDescription = keyframes`${fadeInRight}`;
-const Description = styled.h2`
-  font-size: 2rem;
+const Description = styled.p`
+  font-size: 1.2rem;
   font-style: normal;
-  animation: ${fadeInRightDescription} 1s;
+  animation: ${fadeInRightDescription} 2s;
   a {
     text-decoration: none;
     color: dodgerblue;
@@ -44,8 +46,9 @@ export default () => (
   <StyledHero>
     <Emojis>🇺🇸 😀 🐕 💻 🍻 🚴 🎮</Emojis>
     <Name>Jeremy Amorin</Name>
+    <Avatar />
     <Description>
-      Software Engineer at <a href="https://kubra.com">KUBRA</a>
+      He is a Software Engineer.<br />But man, he's bad at animations.
     </Description>
     <hr />
     <SocialLinks />
