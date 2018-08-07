@@ -1,12 +1,12 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { fadeInUpBig } from 'react-animations';
+import { pulse } from 'react-animations';
 
-const fadeInFooter = keyframes`${fadeInUpBig}`;
+const fadeInFooter = keyframes`${pulse}`;
 
 const StyledFooter = styled.footer`
   text-align: center;
-  animation: ${fadeInFooter} 1s;
+  animation: ${fadeInFooter} 2s;
 `;
 
 const A = styled.a`
@@ -28,7 +28,7 @@ const Footer = () => (
     >
       React
     </A>
-    {' + '}
+    {' / '}
     <A
       color="palevioletred"
       href="https://www.styled-components.com"
@@ -37,7 +37,7 @@ const Footer = () => (
     >
       styled-components
     </A>
-    {' + '}
+    {' / '}
     <A
       color="purple"
       href="https://www.gatsbyjs.org"
@@ -46,7 +46,7 @@ const Footer = () => (
     >
       GatsbyJS
     </A>
-    {' + '}
+    {' / '}
     <A
       color="red"
       href="https://github.com/jamorin/jeremyamorin.com"
