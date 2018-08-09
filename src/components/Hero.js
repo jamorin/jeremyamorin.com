@@ -48,7 +48,7 @@ export default () => (
     <Name>Jeremy Amorin</Name>
     <Avatar />
     <Description>
-      He is a Software Engineer.<br />But man, he's bad at animations.
+      Hi. I'm a Software Engineer,<br />but man, am I bad at animations.
     </Description>
     <hr />
     <SocialLinks />

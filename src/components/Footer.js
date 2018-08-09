@@ -6,7 +6,7 @@ const fadeInFooter = keyframes`${pulse}`;
 
 const StyledFooter = styled.footer`
   text-align: center;
-  animation: ${fadeInFooter} 2s;
+  animation: ${fadeInFooter} 3s;
 `;
 
 const A = styled.a`
