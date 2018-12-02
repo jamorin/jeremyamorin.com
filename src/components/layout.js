@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import styled, { injectGlobal } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import Favicon from 'react-favicon';
 
 import favicon from '../assets/favicon.png';
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
   html {
     font-family: 'Open Sans', sans-serif;
   }
@@ -24,6 +24,7 @@ const StyledLayout = styled.div`
 const Layout = ({ children }) => (
   <StyledLayout>
     <Favicon url={favicon} />
+    <GlobalStyles />
     <Helmet
       title="Jeremy Amorin | Software Engineer"
       meta={[
@@ -48,7 +49,7 @@ const Layout = ({ children }) => (
         },
       ]}
     />
-    {children()}
+    {children}
   </StyledLayout>
 );
 

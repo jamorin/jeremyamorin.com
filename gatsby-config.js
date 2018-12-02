@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: 'https://www.jeremyamorin.com',
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
@@ -17,4 +16,4 @@ module.exports = {
     },
     'gatsby-plugin-netlify',
   ],
-}
+};
