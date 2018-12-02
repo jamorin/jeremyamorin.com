@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'gatsby-link';
 import { keyframes } from 'styled-components';
 import { zoomIn } from 'react-animations';
 
@@ -21,19 +22,6 @@ const Li = styled.li`
   }
 `;
 
-const links = [
-  {
-    href: 'https://github.com/jamorin',
-    title: 'Github',
-    image: github,
-  },
-  {
-    href: 'mailto: hello@jeremyamorin.com',
-    title: 'Email',
-    image: envelope,
-  },
-];
-
 const zoomInSocalLinks = keyframes`${zoomIn}`;
 const StyledSocialLinks = styled.ul`
   animation: ${zoomInSocalLinks} 2s;
@@ -41,13 +29,16 @@ const StyledSocialLinks = styled.ul`
 
 const SocialLinks = () => (
   <StyledSocialLinks>
-    {links.map(({ href, title, image }) => (
-      <Li key={href}>
-        <a href={href} title={title}>
-          <img src={image} alt={title} />
-        </a>
-      </Li>
-    ))}
+    <Li>
+      <a href="https://github.com/jamorin" title="Github">
+        <img src={github} alt="Github" />
+      </a>
+    </Li>
+    <Li>
+      <Link to="/contact">
+        <img src={envelope} alt="Contact" />
+      </Link>
+    </Li>
   </StyledSocialLinks>
 );
 

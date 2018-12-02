@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled, { createGlobalStyle } from 'styled-components';
 import Favicon from 'react-favicon';
@@ -52,9 +51,5 @@ const Layout = ({ children }) => (
     {children}
   </StyledLayout>
 );
-
-Layout.propTypes = {
-  children: PropTypes.func,
-};
 
 export default Layout;
