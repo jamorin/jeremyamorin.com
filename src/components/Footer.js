@@ -53,7 +53,9 @@ const Footer = () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      ❤️
+      <span role="img" aria-label="Heart">
+        ❤️
+      </span>
     </A>
   </StyledFooter>
 );

@@ -19,6 +19,7 @@ const Emojis = styled.div`
   font-size: 1.5em;
   animation: 3s ${fadeInEmoji};
   user-select: none;
+  letter-spacing: 12px;
   /* font-family: 'Segoe UI Emoji'; */
 `;
 
@@ -44,11 +45,35 @@ const Description = styled.p`
 
 export default () => (
   <StyledHero>
-    <Emojis>🇺🇸 😀 🐕 💻 🍻 🚴 🎮</Emojis>
+    <Emojis>
+      <span role="img" aria-label="American">
+        🇺🇸
+      </span>
+      <span role="img" aria-label="Smile">
+        😀
+      </span>
+      <span role="img" aria-label="Dog">
+        🐕
+      </span>
+      <span role="img" aria-label="Computer">
+        💻
+      </span>
+      <span role="img" aria-label="Beer">
+        🍻
+      </span>
+      <span role="img" aria-label="Biker">
+        🚴
+      </span>
+      <span role="img" aria-label="Gaming">
+        🎮
+      </span>
+    </Emojis>
     <Name>Jeremy Amorin</Name>
     <Avatar />
     <Description>
-      Hi. I'm a Software Engineer,<br />but man, am I bad at animations.
+      Hi. I'm a Software Engineer,
+      <br />
+      but man, am I bad at animations.
     </Description>
     <hr />
     <SocialLinks />
