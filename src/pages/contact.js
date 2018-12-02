@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
-import { navigateTo } from 'gatsby-link';
+import { navigate } from 'gatsby-link';
 
 const StyledForm = styled.form``;
 
@@ -34,7 +34,7 @@ export default class Contact extends React.Component {
         ...this.state,
       }),
     })
-      .then(() => navigateTo(form.getAttribute('action')))
+      .then(() => navigate(form.getAttribute('action')))
       .catch(error => alert(error));
   };
   render() {
