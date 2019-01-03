@@ -1,27 +1,36 @@
 {
-  "name": "personal-website",
+  "name": "jeremyamorincom",
+  "description": "",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
   "author": {
     "name": "Jeremy Amorin"
   },
-  "private": true,
   "dependencies": {
-    "babel-plugin-styled-components": "^1.9.4",
-    "gatsby": "^2.0.66",
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.0.77",
+    "gatsby-image": "^2.0.25",
     "gatsby-link": "^2.0.7",
-    "gatsby-plugin-google-fonts": "0.0.4",
+    "gatsby-plugin-manifest": "^2.0.12",
     "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-react-helmet": "^3.0.4",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sharp": "^2.0.17",
     "gatsby-plugin-styled-components": "^3.0.4",
-    "react": "^16.6.3",
-    "react-animations": "^1.0.0",
-    "react-dom": "^16.6.3",
-    "react-favicon": "0.0.14",
+    "gatsby-source-filesystem": "^2.0.12",
+    "gatsby-transformer-sharp": "^2.1.9",
+    "minireset.css": "0.0.3",
+    "polished": "^2.3.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",
-    "styled-components": "^4.1.2"
+    "react-icons": "^3.2.2",
+    "styled-components": "^4.1.3"
   },
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
+    "serve": "gatsby build && gatsby serve",
     "format": "prettier --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
