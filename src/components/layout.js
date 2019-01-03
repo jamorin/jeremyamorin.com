@@ -1,55 +1,39 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import styled, { createGlobalStyle } from 'styled-components';
-import Favicon from 'react-favicon';
+import styled, { ThemeProvider } from 'styled-components';
+import GlobalStyle, { theme } from '../globalStyle';
+import Footer from './Footer';
+import Header from './Header';
+import Head from './Head';
 
-import favicon from '../assets/favicon.png';
-
-const GlobalStyles = createGlobalStyle`
-  html {
-    font-family: 'Open Sans', sans-serif;
-  }
-  body {
-    overflow-x: hidden;
+const Container = styled.div`
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  & > * {
+    flex-shrink: 0;
   }
 `;
 
-const StyledLayout = styled.div`
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 40px 0;
+const Main = styled.main`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  justify-content: center;
 `;
 
 const Layout = ({ children }) => (
-  <StyledLayout>
-    <Favicon url={favicon} />
-    <GlobalStyles />
-    <Helmet
-      title="Jeremy Amorin | Software Engineer"
-      meta={[
-        { name: 'description', content: 'The personal site of Jeremy Amorin' },
-        {
-          name: 'keywords',
-          content:
-            'programming, software, engineer, developer, react, java, javascript',
-        },
-        {
-          name: 'apple-mobile-web-app-capable',
-          content: 'yes',
-        },
-        {
-          name: 'apple-mobile-web-app-status-bar-style',
-          content: 'black-translucent',
-        },
-        {
-          // Android address bar
-          name: 'theme-color',
-          content: '#2b9eeb',
-        },
-      ]}
-    />
-    {children}
-  </StyledLayout>
+  <ThemeProvider theme={theme}>
+    <Container>
+      <GlobalStyle />
+      <Head />
+      <Header />
+      <Main>{children}</Main>
+      <Footer />
+    </Container>
+  </ThemeProvider>
 );
 
 export default Layout;

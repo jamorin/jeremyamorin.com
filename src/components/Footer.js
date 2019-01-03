@@ -1,63 +1,37 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { pulse } from 'react-animations';
+import styled from 'styled-components';
 
-const fadeInFooter = keyframes`${pulse}`;
-
-const StyledFooter = styled.footer`
-  text-align: center;
-  animation: ${fadeInFooter} 3s;
-`;
-
-const A = styled.a`
+const A = styled.a.attrs({
+  target: '_blank',
+  rel: 'noopener noreferrer',
+})`
+  color: ${props => props.theme.main};
+  border-bottom: 1px dotted;
   text-decoration: none;
-  color: ${props => props.color};
+  transition: all 0.3s;
   &:hover {
-    border-bottom: 1px solid ${props => props.color};
+    border-bottom-style: solid;
   }
 `;
 
-const Footer = () => (
-  <StyledFooter>
-    Powered by{' '}
-    <A
-      color="deepskyblue"
-      href="https://reactjs.org/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      React
-    </A>
-    {' / '}
-    <A
-      color="palevioletred"
-      href="https://www.styled-components.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      styled-components
-    </A>
-    {' / '}
-    <A
-      color="purple"
-      href="https://www.gatsbyjs.org"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      GatsbyJS
-    </A>
-    {' / '}
-    <A
-      color="red"
-      href="https://github.com/jamorin/jeremyamorin.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span role="img" aria-label="Heart">
-        ❤️
-      </span>
-    </A>
-  </StyledFooter>
-);
+const Footer = styled.footer`
+  padding: 1rem;
+  text-align: center;
+`;
 
-export default Footer;
+const Footnote = styled.p`
+  font-size: 1.1rem;
+`;
+
+export default () => (
+  <Footer>
+    <Footnote>
+      Handcrafted using <A href="https://www.gatsbyjs.org">Gatsby</A> and hosted
+      on <A href="https://www.netlify.com">Netlify</A>.
+    </Footnote>
+    <Footnote>
+      Source code on{' '}
+      <A href="https://github.com/jamorin/jeremyamorin.com">Github</A>.
+    </Footnote>
+  </Footer>
+);

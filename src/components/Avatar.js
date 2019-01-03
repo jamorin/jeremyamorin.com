@@ -1,21 +1,62 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-import { zoomIn } from 'react-animations';
-import avatar from '../assets/avatar.jpg';
+import { StaticQuery, graphql, Link as GatsbyLink } from 'gatsby';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import { theme } from '../globalStyle';
 
-const avatarAnimation = keyframes`${zoomIn}`;
-
-const StyledAvatar = styled.div`
-  background-image: url(${avatar});
-  width: 120px;
-  height: 120px;
-  background-size: cover;
-  background-position: center center;
-  border-radius: 50%;
-  margin: auto;
-  animation: ${avatarAnimation} 2s;
+const StyledImg = styled(Img).attrs({
+  alt: 'Avatar',
+})`
+  border-radius: 10000px;
 `;
 
-const Avatar = () => <StyledAvatar />;
+const Link = styled(GatsbyLink)`
+  display: flex;
+  border: 3px solid transparent;
+  border-radius: 10000px;
+  &:hover {
+    transition: all 0.3s;
+    border-color: ${props => props.theme.main};
+  }
+`;
 
-export default Avatar;
+const activeStyle = {
+  borderColor: theme.main,
+};
+
+const Avatar = ({ data }) => (
+  <Link title="Home" to="/" activeStyle={activeStyle}>
+    <StyledImg fixed={data.file.childImageSharp.fixed} />
+  </Link>
+);
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        file(
+          sourceInstanceName: { eq: "assets" }
+          base: { eq: "avatar_square.jpg" }
+        ) {
+          childImageSharp {
+            fixed(width: 50, quality: 100) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Avatar data={data} {...props} />}
+  />
+);
+
+Avatar.propTypes = {
+  data: PropTypes.shape({
+    file: PropTypes.shape({
+      childImageSharp: PropTypes.shape({
+        fixed: PropTypes.object.isRequired,
+      }).isRequired,
+    }).isRequired,
+  }).isRequired,
+};

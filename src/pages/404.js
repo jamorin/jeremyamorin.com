@@ -1,11 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import Layout from '../components/layout';
 
-const NotFoundPage = () => (
+const Message = styled.h1`
+  margin: auto;
+  font-size: 3rem;
+`;
+
+export default () => (
   <Layout>
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <Message>Something went wrong?</Message>
   </Layout>
 );
-
-export default NotFoundPage;
