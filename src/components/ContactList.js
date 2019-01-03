@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
 import { FaRegEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import PropTypes from 'prop-types';
+import Obfuscate from 'react-obfuscate';
 
 const hoverStyle = css`
   color: ${props => props.theme.main};
@@ -56,6 +57,16 @@ const Label = styled.a`
   }
 `;
 
+const ObfuscatedLabel = styled(Obfuscate)`
+  color: ${props => props.theme.main};
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  font-size: 1.2rem;
+  &:hover {
+    border-bottom-style: solid;
+  }
+`;
+
 const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -67,11 +78,12 @@ const ContactList = ({ data }) => (
   <StyledList>
     <ContactLink>
       <ContactIcon />
-      <Label
-        href={`mailto:${data.site.siteMetadata.email}?subject=Let's be friends`}
-      >
-        {data.site.siteMetadata.email}
-      </Label>{' '}
+      <ObfuscatedLabel
+        email={data.site.siteMetadata.email}
+        headers={{
+          subject: "Let's be friends",
+        }}
+      />{' '}
       <Label href={data.gpg.publicURL}>PGP key</Label>
     </ContactLink>
     <GithubLink>
