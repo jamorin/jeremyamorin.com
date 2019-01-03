@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import Button from './Button';
+import Recaptcha from 'react-google-recaptcha';
 
 const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: 400px;
   justify-content: center;
   align-items: center;
 `;
@@ -61,8 +62,18 @@ export default class ContactForm extends React.Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
+  handleRecaptcha = value => {
+    this.setState({ 'g-recaptcha-response': value });
+  };
+
   handleSubmit = e => {
     e.preventDefault();
+
+    const recaptcha = this.state['g-recaptcha-response'];
+    if (!recaptcha) {
+      return;
+    }
+
     const form = e.target;
     fetch('/', {
       method: 'POST',
@@ -97,10 +108,10 @@ export default class ContactForm extends React.Component {
         name="contact"
         method="post"
         data-netlify="true"
+        data-netlify-recaptcha="true"
         onSubmit={this.handleSubmit}
       >
         <NoJs>This form requires javascript to be enabled!</NoJs>
-        {/* // TODO recaptcha */}
         <TextArea
           name="message"
           onChange={this.handleChange}
@@ -111,6 +122,12 @@ export default class ContactForm extends React.Component {
           Be sure to mention an email or handle, else I won't be able to contact
           you back!
         </Note>
+        <Recaptcha
+          ref="recaptcha"
+          sitekey={process.env.GATSBY_SITE_RECAPTCHA_KEY}
+          onChange={this.handleRecaptcha}
+          size="compact"
+        />
         <Button type="submit">Submit</Button>
       </StyledForm>
     );

@@ -17,12 +17,12 @@ const Head = ({ data }) => (
         content: data.site.siteMetadata.siteUrl,
       },
     ]}
-    link={[
-      {
-        href: 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans',
-        rel: 'stylesheet',
-      },
-    ]}
+    // link={[
+    //   {
+    //     href: 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans',
+    //     rel: 'stylesheet',
+    //   },
+    // ]}
   />
 );
 
