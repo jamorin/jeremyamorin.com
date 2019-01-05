@@ -30,7 +30,6 @@ module.exports = {
         short_name: 'Jeremy',
         start_url: '/',
         background_color: '#8c43ff',
-        // TODO update this color value
         theme_color: '#8c43ff',
         display: 'minimal-ui',
         icon: 'src/assets/favicon_circle.png',
