@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/jamorin
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.jeremyamorin.com
+  * I am jamorin (https://keybase.io/jamorin) on keybase.
+  * I have a public key ASCjvpFp7RA4Nv5WQ1kAgb6Yvep-RPQX0osOULRrVMDoLQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120d4c11f7cabf879f15f8b8f88905b3410b7f951263524da270ed0e1d6f2a3bf040a",
+      "host": "keybase.io",
+      "kid": "0120a3be9169ed103836fe5643590081be98bdea7e44f417d28b0e50b46b54c0e82d0a",
+      "uid": "720924d691dcf3b05af070560a657619",
+      "username": "jamorin"
+    },
+    "merkle_root": {
+      "ctime": 1546837841,
+      "hash": "522df3553f7bb244b9f4275f64725442e54e822dd17f7bff03cc0fbec9b71e0d94f9fd000fc5ba04845ab0abf9824288b33a4d59154233b8594511478688a7ba",
+      "hash_meta": "30ad707c023e0ca54b07cfe1a077ff439c4c2ebc10c771ebfc22fe06d51f36c0",
+      "seqno": 4242755
+    },
+    "service": {
+      "entropy": "ZvVeCFWK3Iw6L325pyBbbiFa",
+      "hostname": "www.jeremyamorin.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.12.6"
+  },
+  "ctime": 1546837908,
+  "expire_in": 504576000,
+  "prev": "4f07b99a9fa9b1a8e298a366ddef515558eaf4564b1272f2567e28998eaf3147",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgo76Rae0QODb+VkNZAIG+mL3qfkT0F9KLDlC0a1TA6C0Kp3BheWxvYWTESpcCDcQgTwe5mp+psajimKNm3e9RVVjq9FZLEnLyVn4omY6vMUfEICKbRRpJklh0AJc7t1CmJJww/SCx6vRr3cZeCTqya/GmAgHCo3NpZ8RA73C7S/hTEvSkGn1UZsXbeQz6DY2SqApBF7auXPRpOOxIXMao5MmRUsxldjj46uGSBuiRs7mDYRtdO4gm7O3WA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIL+/th0jG5sCtHeAQNVae+xk+aYSnYqvB7SZchNv6toFo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jamorin
+
+==================================================================

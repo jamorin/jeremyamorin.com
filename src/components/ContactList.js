@@ -1,7 +1,12 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import styled, { css } from 'styled-components';
-import { FaRegEnvelope, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import {
+  FaRegEnvelope,
+  FaGithub,
+  FaLinkedinIn,
+  FaKeybase,
+} from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import Obfuscate from 'react-obfuscate';
 
@@ -47,6 +52,15 @@ const GithubIcon = styled(FaGithub)`
   }
 `;
 
+const KeybaseLink = styled.li``;
+
+const KeybaseIcon = styled(FaKeybase)`
+  ${svgStyle}
+  ${KeybaseLink}:hover & {
+    ${hoverStyle}
+  }
+`;
+
 const Label = styled.a`
   color: ${props => props.theme.main};
   border-bottom: 1px dotted;
@@ -86,6 +100,10 @@ const ContactList = ({ data }) => (
       />{' '}
       <Label href={data.gpg.publicURL}>PGP key</Label>
     </ContactLink>
+    <KeybaseLink>
+      <KeybaseIcon />
+      <Label href="https://keybase.io/jamorin">Keybase</Label>
+    </KeybaseLink>
     <GithubLink>
       <GithubIcon />
       <Label href="https://github.com/jamorin">Github</Label>
