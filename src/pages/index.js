@@ -21,7 +21,7 @@ const IndexPage = () => (
         👋
       </span>
     </Heading2>
-    <Heading1>I'm Jeremy Amorin</Heading1>
+    <Heading1>I'm Foo</Heading1>
     <Heading2>A software engineer in Tempe, AZ</Heading2>
   </Layout>
 );
