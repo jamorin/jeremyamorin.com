@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Jeremy Amorin',
-    email: ['me', 'jeremy4morin.com'].join('@').replace('4', 'a'), // 1337 spam protection
+    email: ['jeremy', 'jeremy4morin.com'].join('@').replace('4', 'a'), // 1337 spam protection
     description: 'The personal site of Jeremy Amorin',
     keywords:
       'programming, software, engineer, developer, react, java, javascript',
