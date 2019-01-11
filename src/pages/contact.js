@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Layout from '../components/layout';
 import ContactList from '../components/ContactList';
-import ContactForm from '../components/ContactForm';
+// import ContactForm from '../components/ContactForm';
 
 const Header = styled.h1`
   font-size: 3rem;
@@ -17,7 +17,7 @@ export default class Contact extends React.Component {
         <Helmet title="Contact" />
         <Header>Get in touch</Header>
         <ContactList />
-        <ContactForm />
+        {/* <ContactForm /> */}
       </Layout>
     );
   }
