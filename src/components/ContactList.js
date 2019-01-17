@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import {
   FaRegEnvelope,
   FaGithub,
-  FaLinkedinIn,
+  // FaLinkedinIn,
   FaKeybase,
 } from 'react-icons/fa';
 import PropTypes from 'prop-types';
@@ -34,14 +34,14 @@ const ContactIcon = styled(FaRegEnvelope)`
   }
 `;
 
-const LinkedinLink = styled.li``;
+// const LinkedinLink = styled.li``;
 
-const LinkedinIcon = styled(FaLinkedinIn)`
-  ${svgStyle}
-  ${LinkedinLink}:hover & {
-    ${hoverStyle}
-  }
-`;
+// const LinkedinIcon = styled(FaLinkedinIn)`
+//   ${svgStyle}
+//   ${LinkedinLink}:hover & {
+//     ${hoverStyle}
+//   }
+// `;
 
 const GithubLink = styled.li``;
 
@@ -108,11 +108,11 @@ const ContactList = ({ data }) => (
       <GithubIcon />
       <Label href="https://github.com/jamorin">Github</Label>
     </GithubLink>
-    <LinkedinLink>
+    {/* Let's not use Linkedin */}
+    {/* <LinkedinLink>
       <LinkedinIcon />
-      {/* TODO update linkedin */}
       <Label href="https://github.com/jamorin">Linkedin</Label>
-    </LinkedinLink>
+    </LinkedinLink> */}
   </StyledList>
 );
 
