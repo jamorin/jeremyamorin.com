@@ -8,27 +8,27 @@
     "name": "Jeremy Amorin"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
-    "gatsby": "^2.0.118",
-    "gatsby-image": "^2.0.29",
-    "gatsby-link": "^2.0.10",
-    "gatsby-plugin-manifest": "^2.0.17",
-    "gatsby-plugin-netlify": "^2.0.10",
-    "gatsby-plugin-react-helmet": "^3.0.6",
-    "gatsby-plugin-sharp": "^2.0.20",
-    "gatsby-plugin-styled-components": "^3.0.5",
-    "gatsby-source-filesystem": "^2.0.20",
-    "gatsby-transformer-sharp": "^2.1.13",
-    "graphql": "^14.1.1",
-    "minireset.css": "0.0.4",
-    "polished": "^2.3.3",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "babel-plugin-styled-components": "^1.10.1",
+    "gatsby": "^2.9.7",
+    "gatsby-image": "^2.1.4",
+    "gatsby-link": "^2.1.1",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-netlify": "^2.0.17",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.1.7",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-source-filesystem": "^2.0.41",
+    "gatsby-transformer-sharp": "^2.1.21",
+    "graphql": "^14.3.1",
+    "minireset.css": "0.0.5",
+    "polished": "^3.4.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-google-recaptcha": "^1.0.5",
-    "react-helmet": "^5.2.0",
-    "react-icons": "^3.3.0",
-    "react-obfuscate": "^3.0.0",
-    "styled-components": "^4.1.3"
+    "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
+    "react-obfuscate": "^3.6.2",
+    "styled-components": "^4.3.1"
   },
   "scripts": {
     "start": "gatsby develop",
@@ -38,6 +38,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.16.4"
+    "prettier": "^1.18.2"
   }
 }
